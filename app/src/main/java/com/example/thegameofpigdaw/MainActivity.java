@@ -68,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
         if (jugador == 1) {
             random1 += acumulador1;
             res1.setText(String.valueOf(random1));
+            flecha2.setText("--->");
             if (random1 >= 100) {
                 ganador.setText("Gana el jugador 1");
                 flecha2.setText("");
@@ -77,10 +78,10 @@ public class MainActivity extends AppCompatActivity {
             acum1.setText("0");
             jugador = 2;
             flecha1.setText("");
-            flecha2.setText("--->");
         } else if (jugador == 2){
             random2 += acumulador2;
             res2.setText(String.valueOf(random2));
+            flecha1.setText("<---");
             if (random2 >= 100) {
                 ganador.setText("Gana el jugador 2");
                 flecha2.setText("");
@@ -90,7 +91,6 @@ public class MainActivity extends AppCompatActivity {
             acum2.setText("0");
             jugador = 1;
             flecha2.setText("");
-            flecha1.setText("<---");
         }
     }
     public void reiniciar(View view) {
@@ -115,5 +115,6 @@ public class MainActivity extends AppCompatActivity {
         ganador.setText("");
         flecha1.setText("");
         flecha2.setText("");
+        jugador = 1;
     }
 }
